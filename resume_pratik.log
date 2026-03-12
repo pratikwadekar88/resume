@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.12)  12 MAR 2026 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.12)  12 MAR 2026 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**resume_pratik.tex
+(./resume_pratik.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -322,8 +322,8 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box56
 )
-(./main.aux)
-\openout1 = `main.aux'.
+(./resume_pratik.aux)
+\openout1 = `resume_pratik.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
@@ -421,10 +421,10 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 Package hyperref Info: Link coloring OFF on input line 43.
- (./main.out)
-(./main.out)
+
+(./resume_pratik.out) (./resume_pratik.out)
 \@outlinefile=\write3
-\openout3 = `main.out'.
+\openout3 = `resume_pratik.out'.
 
 Package epstopdf Info: Source file: <iit_logo.eps>
 (epstopdf)                    date: 2026-03-12 14:08:02
@@ -441,7 +441,8 @@ File: iit_logo-eps-converted-to.pdf Graphic file (type pdf)
 <use iit_logo-eps-converted-to.pdf>
 Package pdftex.def Info: iit_logo-eps-converted-to.pdf  used on input line 50.
 (pdftex.def)             Requested size: 60.2806pt x 57.81621pt.
- (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
@@ -472,23 +473,23 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/base/8r.enc} <./iit_logo-eps-converted-to.pdf>] [2] (./main.
-aux)
+st/fonts/enc/dvips/base/8r.enc} <./iit_logo-eps-converted-to.pdf>] [2] (./resum
+e_pratik.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
+Package rerunfilecheck Info: File `resume_pratik.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  12064 strings out of 474222
- 190145 string characters out of 5748733
+ 190316 string characters out of 5748733
  1946975 words of memory out of 5000000
  34055 multiletter control sequences out of 15000+600000
  576474 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,1001b,671s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1010b,671s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texm
@@ -496,7 +497,7 @@ f-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/upl
 ri8a.pfb>
-Output written on main.pdf (2 pages, 509727 bytes).
+Output written on resume_pratik.pdf (2 pages, 509727 bytes).
 PDF statistics:
  65 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
