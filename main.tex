@@ -1,0 +1,235 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[top=0.75in, bottom=0.2in, left=0.35in, right=0.35in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{palatino}
+\usepackage{tabularx}
+\usepackage{microtype} 
+\usepackage[hidelinks]{hyperref} 
+
+% Added [explicit] so we can safely inject the title into the colorbox
+\usepackage[explicit]{titlesec} 
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.82}
+\textheight=9.75in
+\raggedbottom
+
+\setlength{\tabcolsep}{0in}
+\renewcommand{\labelitemii}{$\circ$}
+
+% Globally configure list spacing
+\setlist[itemize,1]{leftmargin=0.15in, topsep=0pt, parsep=0pt, itemsep=5pt, partopsep=0pt}
+\setlist[itemize,2]{leftmargin=0.15in, topsep=2pt, parsep=0pt, itemsep=1pt, partopsep=0pt}
+
+\pagestyle{empty}
+
+%-----------------------------------------------------------
+% Safely redefining \section using explicit arguments (#1)
+\titleformat{\section}
+  {\normalfont}
+  {}
+  {0pt}
+  {\colorbox{mygrey}{\begin{minipage}{\dimexpr\textwidth-2\fboxsep\relax}\small\textbf{#1 \vphantom{p\^{E}}}\end{minipage}}}
+  
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+%-----------------------------------------------------------
+
+\begin{document}
+
+% --- HEADER ---
+\begin{table}[h]
+    \begin{minipage}{0.15\textwidth}
+        \centering
+        % Ensure you have an iit_logo.eps in the same directory, or comment this out
+        \includegraphics[height=0.8in]{iit_logo.eps}
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}{0.80\textwidth}
+        \def\arraystretch{1.15}
+        \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r @{}}
+            \textbf{\Large{Pratik Wadekar}}  &  {24M0843} \\
+            \textbf{Computer Science \& Engineering} & \textbf{M.Tech} \\
+            Indian Institute of Technology, Bombay &  {Male}\\
+            {\small \href{mailto:pratikwadekar88gmail.com}{Gmail} $\vert$
+            Github://\href{https://github.com/pratikwadekar88}{pratikwadekar88} $\vert$  LinkedIn://\href{https://www.linkedin.com/in/pratikwadekar}{pratikwadeakar}}
+            & {\small +91-8390712756 } \\
+        \end{tabular*}
+    \end{minipage}
+\end{table}
+
+\vspace{-0.4cm}
+
+% --- EDUCATION ---
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l l l l l @{}}
+\toprule
+\textbf{Examination}    & \textbf{Board/University}   & \textbf{Institute}    & \textbf{Year}     & \textbf{CPI/\%} \\ 
+\toprule
+Post Graduation & IIT Bombay    & IIT Bombay    & 2024-27   & 8.76\\ 
+Graduation  & Shivaji University, Kolhapur & RIT Rajaramnagar   & 2019-23   & 8.98\\ 
+Intermediate/+2     & Maharashtra State Board   & The New College, Kolhapur & 2017-19       & 85.85\%    \\ 
+Matriculation   & Maharashtra State Board   & New English School Bahireshwar    & 2016-17          & 95.80   \\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\vspace{-0.4cm} 
+
+% --- M.TECH SEMINAR ---
+% \section*{M.TECH SEMINAR}
+% \begin{itemize}
+% \item \textbf{Seminar Title} \hfill \emph{(Jan'26-May'26)}\\
+% \emph{(M.Tech Seminar | Guide: \textbf{Prof. Dummy Name})} 
+%     \begin{itemize}
+%         \item Dummy text for description point 1 regarding the literature review and primary research focus. 
+%         \item Dummy text for description point 2 detailing the methodology and expected outcomes.
+%     \end{itemize}
+% \end{itemize}
+
+% --- COURSE PROJECTS ---
+\section*{COURSE PROJECTS}
+\begin{itemize}
+
+\item \textbf{\href{https://github.com/prasoon054/crisp-champsim}{CRISP Prefetching for Limit Order Book Workloads}}, \emph{(C++, ChampSim, Intel PIN, Bash)}\hfill \emph{(Oct'25-Nov'25)}
+\begin{itemize}
+    \item Profiled and optimized a prefetcher within the ChampSim simulator using Intel VTune to implement CRISP logic.
+    \item Engineered delinquent-load detection, backward-slice construction, and a critical-PC table to prioritize latency-critical instructions.
+    \item Built an Intel PIN pipeline to generate ChampSim-compatible LOB traces, evaluating across 5 workloads via 25M-instruction simulations to achieve up to a 4.98\% IPC gain.
+    \item Released ChampSim patches, PIN tracers, and Bash automation scripts to ensure reproducible experimental results.
+\end{itemize}
+
+\item \textbf{\href{https://github.com/pratikwadekar88/Assignments_IITB/tree/main/VCC/Assignment3}{Conductor Container}}, \emph{(Bash)}\hfill \emph{(Mar'25-Apr'25)}
+\begin{itemize}
+    \item Architected a custom container runtime leveraging Linux namespaces and \texttt{chroot}, fully supporting \texttt{run}, \texttt{ps}, \texttt{stop}, \texttt{exec}, and \texttt{overlayfs} layering.
+    \item Parsed \texttt{Conductorfile} configurations (FROM, COPY, RUN) for custom image builds and implemented isolated networking pipelines using \texttt{veth} pairs and namespace routing.
+    \item Developed an orchestrator script to deploy and bridge two microservices in isolated containers with port forwarding.
+\end{itemize}
+
+\item \textbf{\href{https://github.com/pratikwadekar88/DEX}{DeFi DEX Platform}}, \emph{(Solidity, JS, OpenZeppelin)}\hfill \emph{(Apr'25)}
+\begin{itemize}
+    \item Deployed ERC-20 tokens on the Remix VM and implemented a constant-product Automated Market Maker (AMM) with a 0.3\% swap fee, dynamic pricing, and LP token mint/burn mechanics.
+    \item Developed JavaScript scripts to simulate deposits, withdrawals, and swaps while actively tracking TVL, volume, fees, and slippage.
+    \item Engineered an automated arbitrage smart contract to detect and execute multi-hop trades, ensuring protocol security via strict input validation and safe math operations.
+\end{itemize}
+
+\item \textbf{\href{https://github.com/pratikwadekar88/RustOS}{Kernel in Rust}}, \emph{(Rust, x86\_64, QEMU)}\hfill \emph{(Oct'24-Nov'24)} 
+\begin{itemize}
+    \item Developed a 64-bit bare-metal (\texttt{no\_std}) OS kernel from scratch, implementing a virtual memory manager with paging and a fixed-size block allocator for the kernel heap.
+    \item Engineered low-level CPU exception handlers, managed hardware interrupts via an 8259 PIC, and configured the GDT/TSS to ensure stable stack switching.
+    \item Built a thread-safe VGA text driver and an interactive shell interpreting native PS/2 keyboard scancodes for terminal command execution.
+    \item Architected a hierarchical in-memory virtual file system supporting standard directory traversal and CRUD operations.
+    \item Integrated an automated kernel-level testing framework utilizing QEMU's \texttt{isa-debug-exit} mechanism for synchronous assertions.
+\end{itemize}
+
+\item \textbf{\href{https://github.com/pratikwadekar88/PlacementPortal}{Placement Portal}}, \emph{(Django REST Framework)}\hfill \emph{(Nov'24)}
+\begin{itemize}
+    \item Designed and developed the core RESTful APIs for a comprehensive Placement Portal using Django and Django REST Framework (DRF).
+    \item Implemented a secure, custom role-based authentication system to manage varied permissions for students, administrators, and recruiters.
+    \item Designed relational database schemas (Users, Job Posts, Applications, interactive Feeds, and Comments) ensuring data integrity and efficient querying.
+    \item Engineered a complete job application flow, enabling companies to publish job descriptions and students to seamlessly apply and track their statuses.
+\end{itemize}
+
+\item \textbf{\href{https://github.com/pratikwadekar88/sysml-assignments}{KV Caching - nanoGPT Inference Optimization}}, \emph{(PyTorch, Transformers)}\hfill \emph{(Feb'26)}
+\begin{itemize}
+    \item Implemented Key-Value (KV) caching in the nanoGPT transformer architecture to optimize autoregressive inference.
+    \item Modified the self-attention pipeline to reuse cached keys and values across decoding steps, avoiding redundant computation.
+    \item Improved token generation latency and overall inference efficiency during text generation.
+\end{itemize}
+
+\item \textbf{GPU-Optimized Matrix Multiplication}, \emph{(CUDA, C++)}\hfill \emph{(March'26)}
+\begin{itemize}
+    \item Implemented multiple CUDA kernel strategies for matrix multiplication, exploring different thread-to-data mappings and tiling approaches.
+    \item Optimized GPU memory access patterns by using strided and contiguous loads to improve thread utilization and memory coalescing.
+\end{itemize}
+
+\end{itemize}
+
+% % --- PERSONAL PROJECTS ---
+% \section*{PERSONAL PROJECTS}
+% \begin{itemize}
+
+% \item \textbf{\href{https://github.com/Coderangshu/Native-App}{AI Meal Tracker}}, \emph{(React Native, Expo, Gemini AI, SQLite, Drizzle ORM)}\hfill \emph{(Feb'26-Present)}
+% \begin{itemize}
+%     \item Engineered a cross-platform (iOS, Android, Web) meal tracking application featuring a chat-based interface that processes voice dictations and image uploads for rapid logging.
+%     \item Integrated Google Gemini AI to analyze multi-image inputs and streaming voice-to-text, dependably extracting precise nutritional macros via strict JSON schemas.
+%     \item Architected a robust offline-first, privacy-centric local database utilizing embedded Expo SQLite and Drizzle ORM.
+%     \item Designed a highly performant user interface utilizing Tamagui, featuring dynamic model selectors and fluid 120fps keyboard transitions.
+% \end{itemize}
+
+% \item \textbf{\href{https://github.com/Coderangshu/fuselaG}{fuselaG}}, \emph{(Arch Linux, Bash, QEMU, FUSE)}\hfill \emph{(Jul'25-Present)}
+% \begin{itemize}
+%     \item Engineered custom \texttt{mkinitcpio} initramfs hooks to provision FUSE capabilities and automate early-boot networking (\texttt{dhclient} and static routes) strictly prior to root filesystem mounting.
+%     \item Architected a cloud-first boot environment that natively creates specialized device nodes (\texttt{/dev/fuse}) to facilitate immediate interaction with remote cloud storage buckets utilizing \texttt{s3fs-fuse}.
+%     \item Designed an accelerated kernel testing pipeline using QEMU, leveraging direct kernel boot (\texttt{vmlinuz}), e1000 synthetic networking, and a virtualized OVMF BIOS to significantly reduce iteration times.
+% \end{itemize}
+
+% \item \textbf{\href{https://github.com/Coderangshu/neovim}{Custom Neovim IDE Configuration}}, \emph{(Lua, Neovim, LSP, Treesitter)}\hfill \emph{(Feb'25-Present)}
+% \begin{itemize}
+%     \item Designed a highly maintainable, modular Neovim configuration entirely in Lua, utilizing \texttt{lazy.nvim} to efficiently lazy-load 15+ plugins, optimizing startup time and memory footprint.
+%     \item Configured \texttt{nvim-lspconfig} and \texttt{nvim-cmp} for robust Language Server Protocol (LSP) diagnostics and intelligent autocompletion, natively integrated alongside GitHub Copilot.
+%     \item Streamlined developer workflows with \texttt{conform.nvim} for automated formatting, \texttt{gitsigns.nvim} for inline version control, and a custom Lua-based buffer management system.
+% \end{itemize}
+
+% \end{itemize}
+
+% --- TECHNICAL SKILLS ---
+
+\section*{TECHNICAL SKILLS}
+\begin{itemize}
+  \item \textbf{Languages}: C++, C, Rust, Python, Java, Shell, CUDA
+  \item \textbf{Frameworks \& ML}: Django, PyTorch, Transformers, Self-Attention, Deep Learning
+  \item \textbf{DevOps \& Cloud}: Docker, Kubernetes, Ansible, CI/CD Pipelines, AWS DevOps, CloudFormation, IAM, Fargate, Lambda, EC2
+  \item \textbf{Tools \& Databases}: Git, Linux, Neovim, PostgreSQL, SQLite, LDAP, Mail Server, AWS, GCP
+\end{itemize}
+
+% --- WORK EXPERIENCE ---
+\section*{WORK EXPERIENCE \& INTERNSHIPS}
+\begin{itemize}
+    \item \textbf{System Administrator (RA) } | \textbf{\emph{IIT Bombay}}\hfill \emph{(Aug'24-Present)}
+    \begin{itemize}
+        \item Automated laboratory environment setup and software deployments across multiple systems using Ansible, reducing manual configuration overhead.
+        \item Managing and maintaining critical CSE infrastructure services including Mail Server, LDAP authentication, and Roundcube webmail.
+        \item Administered Linux-based systems, ensuring reliable service operation, user account management, and secure access control across lab environments.
+    \end{itemize}
+
+    \item \textbf{AWS DevOps Engineer} | \textbf{\emph{Ignitiv Technologies Pvt. Ltd}}\hfill \emph{(Jul'23-Jul'24)}
+    \begin{itemize}
+        \item Managed AWS accounts within an organization-wide environment, provisioning and maintaining cloud infrastructure including EC2 instances and CloudFront distributions.
+        \item Automated application deployments by designing CI/CD pipelines using Bitbucket Pipelines, improving deployment reliability and reducing manual release effort.
+        \item Designed and implemented a serverless data ingestion workflow for aggregating order data from multiple e-commerce platforms: scheduled events triggered AWS Lambda functions that launched AWS Fargate tasks to run containerized jobs for fetching and transferring data to KIBO.
+        \item Administered AWS IAM policies and role-based access controls, ensuring secure and organized access management across teams.
+    \end{itemize}
+
+    \item \textbf{AWS Developer Intern} | \textbf{\emph{KONE Elevator \& Escalators}}\hfill \emph{(Jan'23–Jun'23)}
+    \begin{itemize}
+        \item Designed and implemented an alarms and event-trigger notification pipeline for monitoring system events across AWS infrastructure.
+        \item Developed serverless applications using Python and the AWS SAM framework, integrating services including Kinesis, Lambda, DynamoDB, API Gateway, SQS, CloudWatch, Step Functions, Secrets Manager, and SSM.
+        \item Built a disaster-handling pipeline to detect and notify teams when critical AWS resources were deleted from source accounts using CloudTrail, Lambda, and SNS.
+        \item Maintained source control and CI workflows using GitLab, enabling structured development and deployment of serverless infrastructure.
+        \item Implemented IAM-based access control and secure secret management to ensure safe interaction between AWS services.
+    \end{itemize}
+
+\end{itemize}
+
+% --- ACHIEVEMENTS ---
+\section*{ACHIEVEMENTS \& ACADEMICS}
+\begin{itemize}
+  \item \textbf{Competitive Programming}: Leetcode (700+ problems, 3 Star), Codeforces (250+ problems).
+  \item \textbf{GATE 2024}: Qualified in Computer Science Engineering (CSE) with an All India Rank (AIR) of 1532 out of 123967.
+\end{itemize}
+
+% --- POR ---
+% \section*{POR \& EXTRA-CURRICULARS}
+% \begin{itemize}
+% \item \textbf{Interview Co-ordinator} at IIT Bombay \hfill \emph{(2024)}
+% \end{itemize}
+
+\end{document}
